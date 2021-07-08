@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" 
+	xmlns:th="http://www.thymeleaf.org" 
+    xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head >
+
+</head>
+<body>
+<th:block th:fragment="edit_schedle">
+
+<!-- Add Modal -->
+<div class="modal fade" id="schedule_add" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="schedule_add_Label" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h4 class="modal-title" id="schedule_add_Label">편성정보 추가</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <!-- Modal body -->
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label>편성제목(프로그램명)</label>
+                        <input id="title" type="text" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>편성부제목(부제명)</label>
+                        <input id="subtitle" type="text" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>편성 구분</label>
+                        <input id="stream_type" type="text" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>방송시작시간</label>
+                        <input id="startTime" type="text" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>방송종료시간</label>
+                        <input id="endTime" type="text" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>VOD파일</label>
+                        <input id="voditems" type="text" class="form-control">
+                    </div>
+                </form>
+            </div>
+            <!-- Modal footer -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary">저장</button>
+                <button type="button" class="btn btn-warning" data-dismiss="modal">취소</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Edit Modal -->
+<div class="modal fade" id="schedule_edit" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="schedule_edit_Label" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h4 class="modal-title" id="schedule_edit_Label">편성정보 수정</h4>
+                <button type="button" class="btn btn-danger">삭제</button>
+            </div>
+            <!-- Modal body -->
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label>편성 제목 (프로그램명)</label>
+                        <input id="title" type="text" class="form-control" value="title">
+                    </div>
+                    <div class="form-group">
+                        <label>편성 부제목 (부제명)</label>
+                        <input id="subtitle" type="text" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>편성 구분</label>
+                        <input id="stream_type" type="text" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>방송 시작 시간</label>
+                        <input id="startTime" type="text" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>방송 종료 시간</label>
+                        <input id="endTime" type="text" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>VOD 파일</label>
+                        <input id="voditems" type="text" class="form-control">
+                    </div>
+                </form>
+            </div>
+            <!-- Modal footer -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary">저장</button>
+                <button type="button" class="btn btn-warning" data-dismiss="modal">취소</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+</th:block>
+</body>
+</html>

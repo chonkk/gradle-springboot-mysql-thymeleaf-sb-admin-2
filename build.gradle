@@ -51,6 +51,21 @@ dependencies {
     implementation 'joda-time:joda-time:2.10.3'
     implementation 'commons-net:commons-net:3.3'
     implementation 'commons-io:commons-io:2.6'
+
+    implementation 'org.webjars:webjars-locator-core:0.35'
+    implementation 'org.webjars:fullcalendar:5.0.1'
+    implementation 'org.webjars:momentjs:2.29.1'
+    implementation 'org.webjars:bootstrap:4.3.1'
+    implementation 'org.webjars:font-awesome:5.7.2'
+    implementation 'org.webjars:startbootstrap-sb-admin-2:4.0.6'
+    implementation 'org.webjars.bower:require-css:0.1.10'
+    implementation 'org.webjars:mustachejs:2.2.1'
+    implementation 'org.webjars.bower:datatables.net-select:1.3.1'
+    implementation 'org.webjars.bower:sweetalert2:7.0.6'
+    implementation 'org.webjars.bower:bootstrap-toggle:2.2.2'
+    implementation 'org.webjars.bower:moment:2.27.0'
+    implementation 'org.webjars.bower:bootstrap-daterangepicker:3.0.5'
+    runtimeOnly 'org.webjars.bower:requirejs:2.3.6'
 }
 
 test {

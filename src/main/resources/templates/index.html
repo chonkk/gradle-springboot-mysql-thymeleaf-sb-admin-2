@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layouts/main_layout}">
+
+<head>
+  <title  layout:fragment="title">ScheduleManager - index</title>
+</head>
+
+<body id="page-top">
+
+<th:block layout:fragment="custom_script">
+  <!-- Page level plugins -->
+  <script th:src="@{/webjars/startbootstrap-sb-admin-2/4.0.6/vendor/chart.js/Chart.min.js}"></script>
+
+  <!-- Page level custom scripts -->
+  <script type="text/javascript" th:attr="data-main=@{/resources/js/dashboard/main}" th:src="@{/webjars/requirejs/2.3.6/require.js}"></script>
+  <!-- 
+  <script th:src="@{/webjars/startbootstrap-sb-admin-2/4.0.6/js/demo/chart-area-demo.js}"></script>
+  <script th:src="@{/webjars/startbootstrap-sb-admin-2/4.0.6/js/demo/chart-pie-demo.js}"></script>
+   -->
+</th:block>
+</body>
+
+</html>
