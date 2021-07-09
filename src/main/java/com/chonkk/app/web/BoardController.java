@@ -2,6 +2,7 @@ package com.chonkk.app.web;
 
 import com.chonkk.app.domain.Board;
 import com.chonkk.app.service.BoardService;
+import com.chonkk.app.vo.BoardRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -13,7 +14,7 @@ public class BoardController {
     private BoardService boardService;
 
     @RequestMapping(value = "/insert", method = RequestMethod.POST)
-    public ResponseEntity<String> save(@RequestBody com.chonkk.app.web.BoardRequest boardRequest){
+    public ResponseEntity<String> save(@RequestBody BoardRequest boardRequest){
         try{
             Long ret = boardService.save(boardRequest);
             return new ResponseEntity<>("Success",HttpStatus.OK);
@@ -39,7 +40,7 @@ public class BoardController {
 
 
     @RequestMapping(value = "/update",method = RequestMethod.PUT)
-    public ResponseEntity<String> update(@RequestBody com.chonkk.app.web.BoardRequest boardRequest){
+    public ResponseEntity<String> update(@RequestBody BoardRequest boardRequest){
         try{
             Long ret = boardService.save(boardRequest);
             return new ResponseEntity<>("Success",HttpStatus.OK);

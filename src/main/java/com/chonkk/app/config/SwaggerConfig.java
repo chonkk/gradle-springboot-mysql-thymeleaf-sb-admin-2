@@ -1,4 +1,4 @@
-package com.chonkk.app;
+package com.chonkk.app.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
