@@ -1,8 +1,5 @@
 package com.chonkk.app.domain.board;
 
-import com.chonkk.app.domain.board.Board;
-import com.chonkk.app.domain.board.BoardRepository;
-import com.chonkk.app.vo.BoardRequest;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

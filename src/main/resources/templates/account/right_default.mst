@@ -5,11 +5,11 @@
 	<div class="card-body text-center p-5">
         <div class="row">
             <div class="middle-box text-left animated fadeInRightBig">
-                <h3 class="font-bold"><img src="{{contextPath}}/img/common/BULB.png">&nbsp;&nbsp;<span>ACCOUNT LIST 선택</span></h3>
+                <h3 class="font-bold">&nbsp;&nbsp;<span>ACCOUNT LIST 선택</span></h3>
                 <div class="error-desc">
                		ACCOUNT 파트에서 노출되는 계정 목록에서 조회하고자 하는 계정을 선택하면 해당 계정의 정보를 ACCOUNT INFORMATION 파트에서 확인하거나 수정할 수 있습니다.
                 </div>
-			<div class="error-desc text-center"><img alt="CVOD" src="{{contextPath}}/img/common/01_GUIDE_ACCOUNT.png" style="width:500px;"></div>
+			<div class="error-desc text-center"></div>
             </div>
         </div>
    </div>

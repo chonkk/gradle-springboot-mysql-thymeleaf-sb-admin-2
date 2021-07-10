@@ -56,7 +56,7 @@ function (right) {
 	        	type: "GET",
 	            url: contextPath + "/board/list",
 	            dataType: 'json',
-	           // dataSrc: "",
+	            dataSrc: "",
 	            cache:false
 	        },
 	        "columns": [

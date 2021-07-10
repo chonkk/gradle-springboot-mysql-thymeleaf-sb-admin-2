@@ -54,9 +54,9 @@ function (right) {
  			"lengthChange": false,
 	        "ajax": {
 	        	type: "GET",
-	            url: contextPath + "/data/sample_account_list.json",
+	            url: contextPath + "/account/list",
 	            dataType: 'json',
-	            dataSrc: "data",
+	            dataSrc: "content",
 	            cache:false
 	        },
 	        "columns": [
@@ -65,7 +65,7 @@ function (right) {
 	            { title: "계정 타입","data": "accountTypeName" },
 	            { title: "변경 날짜","data": "updated" }
 	        ],
-        	rowId: 'accountId'
+        	rowId: 'id'
 	    } );
 		
 	}
@@ -145,8 +145,18 @@ function (right) {
 	
 	function delete_account_sample(postData){
 
+		$.ajax({
+            url: contextPath + "/account/delete/"+postData.id,
+            method: "DELETE",
+            dataType: "text"
+		})
+		.done(function(){
             swal("삭제 성공!", "계정 삭제에 성공했습니다.", "success");
             createDefaultDetailTemplate(left.init);
+		})
+		.fail(function(){
+			alert("Sorry there was an error.");
+		});
 	}
 	
 	function delete_account(postData){

@@ -2,7 +2,7 @@ package com.chonkk.app.web;
 
 import com.chonkk.app.domain.board.Board;
 import com.chonkk.app.domain.board.BoardService;
-import com.chonkk.app.vo.BoardRequest;
+import com.chonkk.app.domain.board.BoardRequest;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -35,7 +35,7 @@ public class BoardController {
 
     @GetMapping("/list")
     public ResponseEntity<List<Board>> findAllByOrderByIdDesc(){
-        return new ResponseEntity<>(boardService.findAllByOrderByIdDesc(),HttpStatus.OK);
+        return new ResponseEntity<>(boardService.findAllByOrderByIdDesc(), HttpStatus.OK);
     }
 
     @GetMapping("/find/{id}")

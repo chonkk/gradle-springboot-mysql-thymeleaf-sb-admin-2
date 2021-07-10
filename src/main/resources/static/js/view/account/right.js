@@ -62,8 +62,6 @@ function () {
 
 
         $('#saveButton').unbind('click').on( 'click', function () {
-
-				
             swal({
                 title: "저장 하시겠습니까?",
                 html: "선택하신 해당 계정 정보가 저장됩니다.",
@@ -81,13 +79,30 @@ function () {
 	}
 	
 	function save_account(){
-		swal({
-			title: "저장 성공!"
-			, html: "선택하신 계정 정보 저장에 성공했습니다."
-			, type: "success"
-		});
-		$('#accountListTable').DataTable().rows('.selected').deselect();
-	       //createDefaultTemplate(null);
+	    var account = {};
+	        account.accountId = $('#accountId').val();
+	        account.accountName = $('#accountName').val();
+	        account.accountPassword = $('#password').val();
+	        account.accountTypeName = $('#target_AUTHORITY').val();
+
+            $.ajax({
+                url: contextPath + "/account/insert",
+                method: "POST",
+                dataType: "text",
+                contentType: 'application/json',
+                data: JSON.stringify(account)
+            })
+            .done(function(data){
+                swal({
+                    title: "저장 성공!"
+                    , html: "선택하신 계정 정보 저장에 성공했습니다."
+                    , type: "success"
+                });
+                $('#accountListTable').DataTable().rows('.selected').deselect();
+            })
+            .fail(function(a,b,c,d,e){
+                alert("Sorry there was an error.");
+            });
 	}
 
 	return right;
