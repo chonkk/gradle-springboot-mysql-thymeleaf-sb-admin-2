@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layouts/main_layout}">
+
+<head>
+  <title  layout:fragment="title">ScheduleManager - Notification</title>
+</head>
+
+<body id="page-top">
+	<div id="content" layout:fragment="content">
+			<div class="container-fluid">
+					<div class="row" >
+							<div id="row_main" class="col-lg-12"></div>
+					</div>
+			</div>
+	</div>
+
+<th:block layout:fragment="custom_script">
+  <script type="text/javascript" th:attr="data-main=@{/js/view/notification/main}" th:src="@{/webjars/requirejs/2.3.6/require.js}"></script>
+</th:block>
+
+</body>
+
+</html>

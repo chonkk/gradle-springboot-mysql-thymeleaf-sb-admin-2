@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en" 
+	xmlns:th="http://www.thymeleaf.org" 
+    xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head >
+
+</head>
+<body>
+
+<th:block th:fragment="sidebar">
+ <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar" >
+
+      <!-- Sidebar - Brand -->
+      <a class="sidebar-brand d-flex align-items-center justify-content-center" th:href="@{/index}">
+        <div class="sidebar-brand-icon rotate-n-15">
+          <i class="fas fa-laugh-wink"></i>
+        </div>
+        <div class="sidebar-brand-text mx-1" style="text-transform:none;">ScheduleManager</div>
+      </a>
+
+      <!-- Divider -->
+      <hr class="sidebar-divider my-0">
+<!-- 
+      <li class="nav-item">
+        <a class="nav-link" th:href="@{/dashboard}"><i class="fas fa-fw fa-tachometer-alt"></i><span>Dashboard</span></a>
+      </li>
+      <hr class="sidebar-divider">
+ -->
+     <li class="nav-item">
+         <a class="nav-link" th:href="@{/board}"><i class="fas fa-fw fa-bullhorn"></i><span>Board</span></a>
+     </li>
+
+     <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseSchedule" aria-expanded="true" aria-controls="collapseSchedule">
+          <i class="fas fa-fw fa-calendar-alt"></i>
+          <span>방송 관리</span>
+        </a>
+        <div id="collapseSchedule" class="collapse" aria-labelledby="headingSchedule" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Schedule management</h6>
+            <a class="collapse-item" th:href="@{/schedule}">편성 예약 현황</a>
+            <a class="collapse-item" th:href="@{/schedule/history}">편성 입수 히스토리</a>
+          </div>
+        </div>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseDeploy" aria-expanded="true" aria-controls="collapseDeploy">
+          <i class="fas fa-fw fa-file-video"></i>
+          <span>배포 관리</span>
+        </a>
+        <div id="collapseDeploy" class="collapse" aria-labelledby="headingDeploy" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Deploy management</h6>
+            <a class="collapse-item" th:href="@{/deploy}">편성 배포 현황</a>
+            <a class="collapse-item" th:href="@{/deploy/history}">편성 배포 히스토리</a>
+          </div>
+        </div>
+      </li>
+
+
+      <li class="nav-item">
+        <a class="nav-link" th:href="@{/notification}"><i class="fas fa-fw fa-bullhorn"></i><span>알림 관리</span></a>
+      </li>      
+
+      <!-- Divider -->
+      <hr class="sidebar-divider">
+      <!-- Nav Item - Pages Collapse Menu -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseProperties" aria-expanded="true" aria-controls="collapseProperties">
+          <i class="fas fa-fw fa-cog"></i>
+          <span>설정</span>
+        </a>
+        <div id="collapseProperties" class="collapse" aria-labelledby="headingProperties" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Properties setting</h6>
+            <a class="collapse-item" th:href="@{/channel}">채널 관리</a>
+            <h6 class="collapse-header">Account setting</h6>
+            <a class="collapse-item" th:href="@{/account}">계정 관리</a>
+            <h6 class="collapse-header">Others</h6>
+          	<a class="collapse-item" th:href="@{/dashboard}">Dashboard</a>
+          </div>
+        </div>
+      </li>
+
+      <!-- Divider -->
+      <hr class="sidebar-divider d-none d-md-block">
+
+      <!-- Sidebar Toggler (Sidebar) -->
+      <div class="text-center d-none d-md-inline">
+        <button class="rounded-circle border-0" id="sidebarToggle"></button>
+      </div>
+
+    </ul>
+<script th:inline="javascript">
+	function onLoadSidebar() {
+		
+		var target;
+		if(this.location.search == null || this.location.search== "" || this.location.search == 'undefined')
+			target = $('a[href="' + this.location.pathname + '"]');
+		else
+			target = $('a[href="' + this.location.pathname + this.location.search + '"]');
+		
+		if(target!=null && target != 'undefined') {
+			target.addClass('active');
+			var parent = target.parents('li');
+			if(parent!=null){
+				parent.addClass('active');
+				parent.find('a.nav-link').click();
+			}
+		}
+	}
+</script>
+</th:block>
+</body>
+</html>

@@ -1,0 +1,56 @@
+{
+"data":[
+	{
+		"id": "4",
+		"noti_id": "4",
+		"type":"입수 실패",
+		"name":"채널1[2021-02-03~2021-02-04]",
+		"description":"시작일 오류",
+		"created_by":"user2",
+		"created":"2021-02-04T08:00:00",
+		"status":"완료",
+		"updated":"2021-02-04T08:00:00",
+		"indicate_status":"미인지",
+		"indicate_by":""
+	},
+	{
+		"id": "3",
+		"noti_id": "3",
+		"type":"파일 입수 실패",
+		"name":"콘텐츠 배포 서버 1[2021-02-03~2021-02-04]",
+		"description":"파일 없음",
+		"created_by":"admin",
+		"created":"2021-02-03T07:00:00",
+		"status":"실패",
+		"updated":"2021-02-03T07:00:00",
+		"indicate_status":"미인지",
+		"indicate_by":""
+	},
+	{
+		"id": "2",
+		"noti_id": "2",
+		"type":"파일 입수 실패",
+		"name":"콘텐츠 오리진 서버 1",
+		"description":"파일 없음",
+		"created_by":"user1",
+		"created":"2021-02-02T06:00:00",
+		"status":"실패",
+		"updated":"2021-02-02T06:00:00",
+		"indicate_status":"인지",
+		"indicate_by":"admin"
+	},
+	{
+		"id": "1",
+		"noti_id": "1",
+		"type":"배포 실패",
+		"name":"편성배포서버1",
+		"description":"배포서버 오류",
+		"created_by":"admin",
+		"created":"2021-02-01T05:00:00",
+		"status":"완료",
+		"updated":"2021-02-01T05:00:00",
+		"indicate_status":"인지",
+		"indicate_by":"user1"
+	}
+]
+}

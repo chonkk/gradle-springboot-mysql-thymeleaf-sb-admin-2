@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layouts/main_layout}">
+
+<head>
+  <title  layout:fragment="title">ScheduleManager - Channel</title>
+  
+</head>
+
+<body id="page-top">
+	<div id="content" layout:fragment="content">
+			<div class="container-fluid">
+					<div class="row">
+						<div class="col-lg-3" id="row_main_left" ></div>
+						<div class="col-lg-3" id="row_main_center">
+								<div class="row mb-3" id="row_main_center_top"></div>
+								<div class="row mb-3" id="row_main_center_center"></div>
+								<div class="row" id="row_main_center_bottom"></div>
+						</div>
+						<div class="col-lg-6" id="row_main_right">
+								<div class="col-lg-6" id="row_main_right_top">
+								</div>
+								<div class="col-lg-6" id="row_main_right_bottom">
+								</div>
+						</div>
+					</div>
+			</div>
+	</div>
+<!-- custom css -->
+<th:block layout:fragment="custom_css">
+</th:block>
+
+<th:block layout:fragment="custom_script">
+	<script type="text/javascript" th:attr="data-main=@{/js/view/channel/main}" th:src="@{/webjars/requirejs/2.3.6/require.js}"></script>
+</th:block>
+
+</body>
+
+</html>

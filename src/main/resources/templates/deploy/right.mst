@@ -1,0 +1,67 @@
+<input type="hidden" id="id" value="{{#accountId}}{{accountId}}{{/accountId}}" />
+<input type="hidden" id="currPassword" value="{{#accountPassword}}{{accountPassword}}{{/accountPassword}}" />
+<div class="card card-header-actions h-100">
+						<div class="card-header py-3">
+									<h5>편성 배포 상세 정보</h5>
+									<div class="ibox-tools">
+										<button type="button" class="btn btn-primary btn-sm" id="saveButton" title="정보를 저장합니다.">저장</button>
+										<button type="button" class="btn btn-warning btn-sm" id="cancelSaveButton" title="변경을 취소합니다.">취소</button>
+									</div>
+						</div>
+						<div class="card-body ">
+	                			<div class="row">
+								                			
+							                        <div class="col-xl-12 col-md-12 mb-1">
+				                                            <div class="form-group">
+				                                                <label class="small mb-1" for="accountName">스케줄 이름</label>
+				                                                <input class="form-control" id="accountName" type="text" placeholder="Enter your name" value="{{#schedule_nm}}{{schedule_nm}}{{/schedule_nm}}">
+				                                            </div>
+							                        </div>
+							    </div>     
+	                			<div class="row">
+							
+							                        <div class="col-xl-6 col-md-6 mb-1">
+							                            <div class="card border-left-success shadow h-100 py-2">
+							                                <div class="card-body">
+							                                    <div class="row no-gutters align-items-center">
+							                                        <div class="col mr-2">
+							                                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">승인</div>
+							                                            <div class="h5 mb-0 font-weight-bold text-gray-800">2</div>
+							                                        </div>
+							                                        <div class="col-auto">
+							                                            <i class="fas fa-calendar-plus fa-2x text-gray-300"></i>
+							                                        </div>
+							                                    </div>
+							                                </div>
+							                            </div>
+							                        </div>
+							
+							                        <div class="col-xl-6 col-md-6 mb-1">
+							                            <div class="card border-left-warning shadow h-100 py-2">
+							                                <div class="card-body">
+							                                    <div class="row no-gutters align-items-center">
+							                                        <div class="col mr-2">
+							                                            <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">제외</div>
+							                                            <div class="h5 mb-0 font-weight-bold text-gray-800">2</div>
+							                                        </div>
+							                                        <div class="col-auto">
+							                                            <i class="fas fa-calendar-times fa-2x text-gray-300"></i>
+							                                        </div>
+							                                    </div>
+							                                </div>
+							                            </div>
+							                        </div>
+	                			</div>
+					    	
+					    	<table id="contentListTable" class="display compact">
+				                    <thead>
+							            <tr>
+							                <th style="width: 9rem;">시작시간</th>
+							                <th style="width: 12rem;">제목</th>
+							                <th >부제목</th>
+							                <th style="width: 2rem;">상태</th>
+							            </tr>
+							        </thead>
+				            </table>
+					   </div>
+</div>

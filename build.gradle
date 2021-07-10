@@ -8,11 +8,37 @@ plugins {
 group 'com.chonkk'
 version '0.0.1'
 sourceCompatibility = '1.8'
-compileJava.options.encoding = "UTF-8"
-compileTestJava.options.encoding = "UTF-8"
+compileJava {
+    options.encoding = "UTF-8"
+}
+compileTestJava {
+    options.encoding = "UTF-8"
+}
+
+project.webAppDirName = 'src/main/webapp'
+project.buildDir = 'build'
+//ext.profile = (!project.hasProperty('profile') || !profile) ? 'dev' : profile
 
 repositories {
+    flatDir { dirs "src/main/webapp/WEB-INF/lib" }
     mavenCentral()
+    maven { url "http://repo.spring.io/libs-release" }
+
+
+}
+war {
+    webInf { from 'src/main/resources/templates' into '/templates'}
+}
+bootJar {
+    manifest {
+        attributes 'Start-Class': 'com.example.ExampleApplication'
+    }
+    from{
+        configurations.compile.collect{
+            it.isDirectory()? it:zipTree(it)
+        }
+    }
+
 }
 jar {
     manifest{
@@ -28,6 +54,7 @@ jar {
 }
 
 dependencies {
+    compile fileTree(dir: 'src/main/webapp/WEB-INF/lib', include: ['*.jar'])
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
     implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation 'org.testng:testng:7.1.0'
@@ -52,19 +79,19 @@ dependencies {
     implementation 'commons-net:commons-net:3.3'
     implementation 'commons-io:commons-io:2.6'
 
-    implementation 'org.webjars:webjars-locator-core:0.35'
-    implementation 'org.webjars:fullcalendar:5.0.1'
-    implementation 'org.webjars:momentjs:2.29.1'
-    implementation 'org.webjars:bootstrap:4.3.1'
-    implementation 'org.webjars:font-awesome:5.7.2'
-    implementation 'org.webjars:startbootstrap-sb-admin-2:4.0.6'
-    implementation 'org.webjars.bower:require-css:0.1.10'
-    implementation 'org.webjars:mustachejs:2.2.1'
-    implementation 'org.webjars.bower:datatables.net-select:1.3.1'
-    implementation 'org.webjars.bower:sweetalert2:7.0.6'
-    implementation 'org.webjars.bower:bootstrap-toggle:2.2.2'
-    implementation 'org.webjars.bower:moment:2.27.0'
-    implementation 'org.webjars.bower:bootstrap-daterangepicker:3.0.5'
+    runtimeOnly 'org.webjars:webjars-locator-core:0.35'
+    runtimeOnly 'org.webjars:fullcalendar:5.0.1'
+    runtimeOnly 'org.webjars:momentjs:2.29.1'
+    runtimeOnly 'org.webjars:bootstrap:4.3.1'
+    runtimeOnly 'org.webjars:font-awesome:5.7.2'
+    runtimeOnly 'org.webjars:startbootstrap-sb-admin-2:4.0.6'
+    runtimeOnly 'org.webjars.bower:require-css:0.1.10'
+    runtimeOnly 'org.webjars:mustachejs:2.2.1'
+    runtimeOnly 'org.webjars.bower:datatables.net-select:1.3.1'
+    runtimeOnly 'org.webjars.bower:sweetalert2:7.0.6'
+    runtimeOnly 'org.webjars.bower:bootstrap-toggle:2.2.2'
+    runtimeOnly 'org.webjars.bower:moment:2.27.0'
+    runtimeOnly 'org.webjars.bower:bootstrap-daterangepicker:3.0.5'
     runtimeOnly 'org.webjars.bower:requirejs:2.3.6'
 }
 

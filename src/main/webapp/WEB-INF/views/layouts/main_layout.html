@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<head>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<title>ScheduleManager</title>
+	<link rel="shortcut icon" type="image/x-icon" th:href="@{/img/favicon.ico}">
+	<link id="contextPathHolder" th:data-contextPath="${#httpServletRequest.getContextPath()}"/>	
+	<script type="text/javascript" th:inline="javascript">
+	 	var contextPath = /*[[${#httpServletRequest.getContextPath()}]]*/ '';
+	 	window.contextPath = contextPath;
+	</script>
+	<link th:href="@{/webjars/startbootstrap-sb-admin-2/4.0.6/vendor/fontawesome-free/css/all.min.css}" rel="stylesheet" type="text/css">
+	<link th:href="@{/webjars/startbootstrap-sb-admin-2/4.0.6/css/sb-admin-2.css}" rel="stylesheet">
+	<link th:href="@{/webjars/bootstrap/4.3.1/css/bootstrap.min.css}" rel="stylesheet">
+	<link th:href="@{/css/castis.css}" rel="stylesheet" type="text/css">
+
+</head>
+
+<body id="page-top">
+		
+	<!-- Page Wrapper -->
+	<div id="wrapper">
+	
+	    <!-- Sidebar -->
+		<th:block th:insert="fragments/main_sidebar :: sidebar"></th:block>
+	    <!-- End of Sidebar -->
+	
+	    <!-- Content Wrapper -->
+	    <div id="content-wrapper" class="d-flex flex-column">
+	
+		          <!-- Topbar -->
+				  <th:block th:insert="fragments/main_nav :: nav"></th:block>
+		          <!-- End of Topbar -->
+		          
+			      <!-- Main Content -->
+			      <div id="content" layout:fragment="content"></div>
+			      <!-- End of Main Content -->
+			
+			      <!-- Footer -->
+				  <th:block th:insert="fragments/main_footer :: footer"></th:block>
+			      <!-- End of Footer -->
+	
+	    </div>
+	    <!-- End of Content Wrapper -->
+	
+	</div>
+	<!-- End of Page Wrapper -->
+	
+	<!-- Scroll to Top Button-->
+	<a class="scroll-to-top rounded" href="#page-top"><i class="fas fa-angle-up"></i> </a>
+	
+	<!-- Logout Modal-->
+	<th:block th:insert="fragments/modal_logout :: logout"></th:block>
+	
+	<th:block layout:fragment="custom_css"></th:block>
+	<th:block layout:fragment="custom_modal"></th:block>
+	<th:block layout:fragment="custom_script"></th:block>
+
+</body>
+
+</html>

@@ -1,0 +1,14 @@
+<div class="card card-header-actions h-100">
+	<div class="card-header py-3"><h5>방송 편성표</h5>
+									<div class="col-lg-4">
+										<select id="target_channel" class="form-control">
+				   							<option value="Admin">채널1</option>
+				   							<option value="User">채널2</option>
+									    </select>
+									</div>
+	</div>
+	<div class="card-body">
+	                <div id="main_calendar">
+	                </div>
+   </div>
+</div>

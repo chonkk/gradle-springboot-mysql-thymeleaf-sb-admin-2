@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layouts/main_layout}">
+
+<head>
+  <title  layout:fragment="title">ScheduleManager - Account</title>
+</head>
+
+<body id="page-top">
+	<div id="content" layout:fragment="content">
+			<div class="container-fluid">
+					<div class="row">
+						<div class="col-lg-5" id="row_main_left" ></div>
+						<div class="col-lg-7" id="row_main_right"></div>
+					</div>
+			</div>
+	</div>
+
+<th:block layout:fragment="custom_script">
+  <script type="text/javascript" th:attr="data-main=@{/js/view/account/main}" th:src="@{/webjars/requirejs/2.3.6/require.js}"></script>
+</th:block>
+
+</body>
+
+</html>

@@ -1,0 +1,11 @@
+<div class="card card-header-actions h-100">
+						<div class="card-header py-3">
+									<h5>방송 편성 정보</h5>
+									<div>
+										<button type="button" class="btn btn-primary btn-sm" id="exportButton" title="편성 정보를 배포합니다.">편성정보 배포</button>
+									</div>
+						</div>
+						<div class="card-body ">
+						            <div id="schedule_list"></div>
+					   </div>
+</div>

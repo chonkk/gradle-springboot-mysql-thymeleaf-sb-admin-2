@@ -1,0 +1,24 @@
+{ "channelList":[
+		        {
+		        	"serverId":1,
+		         	"title": "채널 1"
+		        },
+		        {
+		        	"serverId":2,
+		         	"title": "채널 2"
+		        },
+		        {
+		        	"serverId":3,
+		         	"title": "채널 3"
+		        },
+		        {
+		        	"serverId":4,
+		         	"title": "채널 4"
+		        },
+		        {
+		        	"serverId":5,
+		         	"title": "채널 5"
+		        }
+		      ]
+}
+

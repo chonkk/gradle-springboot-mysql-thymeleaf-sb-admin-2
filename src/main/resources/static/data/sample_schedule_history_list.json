@@ -1,0 +1,60 @@
+{
+"data":[
+	{
+		"id": "4",
+		"channel_name" : "channel 2",
+		"start_date": "2021-02-06",
+		"end_date":"2021-02-09",
+		"status":"완료",
+		"type":"API",
+		"success_count":400,
+		"fail_count":0,
+		"notification_status":"-",
+		"description":"",
+		"created":"2021-02-06T08:00:00",
+		"updated":"2021-02-06T08:00:00"
+	},
+	{
+		"id": "3",
+		"channel_name" : "channel 1",
+		"start_date": "2021-02-06",
+		"end_date":"2021-02-06",
+		"status":"실패",
+		"type":"API",
+		"success_count":0,
+		"fail_count":100,
+		"notification_status":"실패",
+		"description":"알림서버 연결 실패",
+		"created":"2021-02-06T08:00:00",
+		"updated":"2021-02-06T08:00:00"
+	},
+	{
+		"id": "2",
+		"channel_name" : "channel 2",
+		"start_date": "2021-02-04",
+		"end_date":"2021-02-05",
+		"status":"완료",
+		"type":"File",
+		"success_count":200,
+		"fail_count":0,
+		"notification_status":"-",
+		"description":"-",
+		"created":"2021-02-05T08:00:00",
+		"updated":"2021-02-06T08:00:00"
+	},
+	{
+		"id": "1",
+		"channel_name" : "channel 1",
+		"start_date": "2021-02-04",
+		"end_date":"2021-02-04",
+		"status":"실패",
+		"type":"API",
+		"success_count":50,
+		"fail_count":50,
+		"notification_status":"성공",
+		"description":"-",
+		"created":"2021-02-04T08:00:00",
+		"updated":"2021-02-06T08:00:00"
+	}
+]
+}

@@ -1,0 +1,32 @@
+<div class="card card-header-actions h-100">
+						<div class="card-header py-3">
+									<h5>채널 상세 설정</h5>
+									<div class="ibox-tools">
+										<button type="button" class="btn btn-primary btn-sm" id="saveButton" title="정보를 저장합니다.">저장</button>
+										<button type="button" class="btn btn-warning btn-sm" id="cancelSaveButton" title="변경을 취소합니다.">취소</button>
+									</div>
+						</div>
+						<div class="card-body ">
+							<form>
+                                            <div class="form-group">
+                                                <label class="small mb-1" for="accountId">채널 ID<font color="#d73d32">*</font></label>
+                                                <input class="form-control" id="accountId" type="text" placeholder="Enter channel id" value="{{#channelId}}{{channelId}}{{/channelId}}" {{#channelId}}readOnly{{/channelId}}>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="small mb-1" for="accountName">채널 이름<font color="#d73d32">*</font></label>
+                                                <input class="form-control" id="accountName" type="text" placeholder="Enter channel name" value="{{#channelName}}{{channelName}}{{/channelName}}">
+                                            </div>
+                                            <div class="form-row">
+                                                <div class="form-group col-md-6">
+                                                    <label class="small mb-1" for="target_AUTHORITY">채널 타입<font color="#d73d32">*</font></label>
+									            	<select id="target_AUTHORITY" class="form-control">
+							   							<option value="Admin">오디오 채널</option>
+							   							<option value="User">비디오 채널</option>
+												    </select>
+                                                </div>
+                                            </div>
+						            <div class="col-sm-12 form-group" id="div_menuAccessAuthTable">
+									</div>
+							</form>
+					   </div>
+</div>

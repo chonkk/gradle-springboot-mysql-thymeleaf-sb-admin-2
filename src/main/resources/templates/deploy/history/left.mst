@@ -1,0 +1,44 @@
+<div class="card card-header-actions h-100">
+	<div class="card-header py-3"><h5>편성 배포 히스토리</h5>
+			<div>
+				<button type="button" class="btn btn-warning btn-sm" id="deleteScheduleButton" title="스캐줄을 삭제합니다." disabled>삭제</button>
+			</div>
+	</div>
+	<div class="card-body">
+	                <div class="datatable">
+				   					<form>
+                                            <div class="form-row">
+	                                                <div class="form-group col-md-6">
+	                                                    <label class="small mb-1" for="select_status">상태</label>
+								   						<select id="select_status" class="form-control input-sm " >
+								   							<option value="">ALL</option>
+								   							<option value="User">완료</option>
+								   							<option value="Admin">실패</option>
+								   						</select>
+	                                                </div>
+	                                                <div class="form-group col-md-6">
+	                                                    <label class="small mb-1" style="padding-right:10px;">검색</label>
+														<div class="input-group">
+															<input type="text" class="form-control input-sm" id="searchKeyword" placeholder="스케줄 이름 검색">
+															<span class="input-group-btn" style="padding-left:10px;"> 
+																<button type="button" class="btn btn-primary" id="searchButton" title="스케줄을 검색합니다."><i class="fa fa-search"></i></button>
+															</span>
+														</div>
+	                                                </div>
+                                            </div>
+						   				</form>
+			                    <table id="listTable" class="display compact">
+				                    <thead>
+							            <tr>
+							                <th>스케줄 이름</th>
+							                <th>요청자 ID</th>
+							                <th>요청 날짜</th>
+							                <th>상태</th>
+							                <th>수정 날짜</th>
+							                <th>편성 파일</th>
+							            </tr>
+							        </thead>
+			                    </table>
+	                </div>
+   </div>
+</div>

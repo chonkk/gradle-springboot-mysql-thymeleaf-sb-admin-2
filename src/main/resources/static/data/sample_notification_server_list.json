@@ -1,0 +1,14 @@
+{ "serverList":[
+		        {
+		        	"serverId":1,
+		         	"serverTitle": "알림서버 #1",
+		         	"serverURL": "http://localhost:8080"
+		        },
+		        {
+		        	"serverId":2,
+		         	"serverTitle": "알림서버 #2",
+		         	"serverURL": "http://127.0.0.1:8090"
+		        }
+		      ]
+}
+

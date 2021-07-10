@@ -1,0 +1,37 @@
+<div class="card card-header-actions h-100 w-100 min-vh-25">
+	<div class="card-header">콘텐츠 오리진 서버
+				<button class="btn btn-primary btn-sm" type="button" id="createButton" title="새 콘텐츠 서버를 추가합니다.">추가</button>
+	</div>
+
+    <div class="card-body">
+    	{{#serverList.0}}
+    		<div class="list-group" id="originList">
+    				{{#serverList}}
+			  		<div class="card card-header-action mb-2 border-success border-bottom-success">
+						<div class="card-header ">
+			  						<input type="hidden" id="channelId" value="{{#serverId}}{{serverId}}{{/serverId}}" />
+			  						<input type="hidden" id="channelName" value="{{#title}}{{title}}{{/title}}" />
+									<button type="button" class="btn btn-block editChannel">{{#title}}{{title}}{{/title}}</button>
+									 <div class="dropdown no-arrow">
+                                        <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+                                        </a>
+                                        <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink" style="">
+                                            <button type="button" class="dropdown-item editChannel"><i class="fas fa-fw fa-edit mr-2"></i>수정</button>
+                                            <div class="dropdown-divider"></div>
+                                            <button type="button" class="dropdown-item removeChannel"><i class="fas fa-fw fa-trash mr-2"></i>삭제</button>
+                                        </div>
+                                    </div>
+						</div>
+					</div>
+    				{{/serverList}}
+			</div>
+		{{/serverList.0}}
+		{{^serverList.0}}
+			<div>
+			  설정 정보가 없습니다.
+			</div>
+		{{/serverList.0}}
+ 	</div>
+
+</div>

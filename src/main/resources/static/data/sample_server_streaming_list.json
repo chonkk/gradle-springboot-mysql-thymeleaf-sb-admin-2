@@ -1,0 +1,24 @@
+{ "serverList":[
+		        {
+		        	"serverId":1,
+		         	"title": "스트리밍 서버  #1"
+		        },
+		        {
+		        	"serverId":2,
+		         	"title": "스트리밍 서버  #2"
+		        },
+		        {
+		        	"serverId":3,
+		         	"title": "스트리밍 서버  #3"
+		        },
+		        {
+		        	"serverId":4,
+		         	"title": "스트리밍 서버  #4"
+		        },
+		        {
+		        	"serverId":5,
+		         	"title": "스트리밍 서버  #5"
+		        }
+		      ]
+}
+

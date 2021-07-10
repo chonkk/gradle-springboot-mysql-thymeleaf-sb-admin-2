@@ -1,0 +1,16 @@
+<div class="card h-100">
+	<div class="card-header py-3">
+		<h5>편성 배포 히스토리 상세 정보</h5>
+	</div>
+	<div class="card-body text-center p-5">
+        <div class="row">
+            <div class="middle-box text-left animated fadeInRightBig">
+                <h3 class="font-bold"><img src="{{contextPath}}/img/common/BULB.png">&nbsp;&nbsp;<span>SCHEDULE 선택 </span></h3>
+                <div class="error-desc">
+               		SCHEDULE 파트에서 노출되는 스케줄 목록에서 조회하고자 하는 스케줄을 선택하면 해당 스케줄에 포함된 콘텐츠의 정보와 배포 결과를 SELECTED CONTENTS 파트에서 확인 할 수 있습니다.
+                </div>
+			<div class="error-desc text-center"><img alt="CVOD" src="{{contextPath}}/img/common/03_GUIDE_CONTENTS.png" style="width:500px;"></div>
+            </div>
+        </div>
+   </div>
+</div>
