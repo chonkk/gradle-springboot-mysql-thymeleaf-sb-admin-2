@@ -7,6 +7,7 @@ import javax.xml.ws.Response;
 import com.chonkk.app.domain.account.Account;
 import com.chonkk.app.domain.account.AccountRequest;
 import com.chonkk.app.domain.account.AccountService;
+import com.chonkk.app.vo.DataTable;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -52,18 +53,29 @@ public class AccountController {
     }
 
     @GetMapping("/list")
-    public ResponseEntity list(HttpServletRequest request,
-           @RequestParam(required = false, defaultValue = "0") int page,
-           @RequestParam(required = false, defaultValue = "5") int size){
+    public DataTable list(HttpServletRequest request,
+                          @RequestParam(required = false, defaultValue = "0") int start,
+                          @RequestParam(required = false, defaultValue = "5") int length,
+                          @RequestParam(required = false, defaultValue = "0") int draw,
+                          @RequestParam(required = false) String[] search,
+                          @RequestParam(required = false) String[] columns
+    ){
         try{
             Map<String, String[]> map =   request.getParameterMap();
-
-            return new ResponseEntity<>(
-                    accountService.findAll(PageRequest.of(page,size)),
-                    HttpStatus.OK);
+            Long count = accountService.count();
+            List<Account> list = null;
+            if(count > 0) {
+                list = accountService.findAll(PageRequest.of(start, length)).toList();
+            }
+            return DataTable.builder()
+                    .draw(draw)
+                    .data(list)
+                    .recordsTotal(count)
+                    .recordsFiltered(count)
+                    .build();
         }catch(Exception e){
             log.error("",e);
-            return new ResponseEntity<>(null, HttpStatus.OK);
+            return DataTable.builder().build();
         }
     }
 

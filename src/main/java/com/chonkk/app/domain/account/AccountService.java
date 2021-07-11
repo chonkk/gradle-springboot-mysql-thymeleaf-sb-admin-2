@@ -3,6 +3,7 @@ package com.chonkk.app.domain.account;
 import lombok.NoArgsConstructor;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Example;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
@@ -34,5 +35,9 @@ public class AccountService {
 
     public void delete(Long id) {
         accountRepository.deleteById(id);
+    }
+
+    public Long count(){
+        return accountRepository.count();
     }
 }

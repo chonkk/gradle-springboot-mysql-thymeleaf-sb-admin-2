@@ -3,6 +3,7 @@ define([],
 function () {
 	
 	var right={};
+		window.right = right;
 	
 	right.initDefault = function initDefault(callback) {
 		createTemplate_default(callback);
@@ -79,11 +80,12 @@ function () {
 	}
 	
 	function save_account(){
-	    var account = {};
-	        account.accountId = $('#accountId').val();
-	        account.accountName = $('#accountName').val();
-	        account.accountPassword = $('#password').val();
-	        account.accountTypeName = $('#target_AUTHORITY').val();
+	    var account = {
+	        'accountId' : $('#accountId').val(),
+	        'accountName' : $('#accountName').val(),
+	        'accountPassword' : $('#password').val(),
+	        'accountTypeName' : $('#target_AUTHORITY').val()
+	    };
 
             $.ajax({
                 url: contextPath + "/account/insert",
@@ -98,7 +100,8 @@ function () {
                     , html: "선택하신 계정 정보 저장에 성공했습니다."
                     , type: "success"
                 });
-                $('#accountListTable').DataTable().rows('.selected').deselect();
+               // $('#accountListTable').DataTable().rows('.selected').deselect();
+               window.left.init();
             })
             .fail(function(a,b,c,d,e){
                 alert("Sorry there was an error.");

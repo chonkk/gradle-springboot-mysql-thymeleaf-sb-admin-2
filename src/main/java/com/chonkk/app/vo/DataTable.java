@@ -11,4 +11,8 @@ import java.util.List;
 @SuperBuilder
 public class DataTable {
     private List data;
+    private Long recordsTotal;
+    private Long recordsFiltered;
+    private Integer draw;
+    private String error=null;
 }

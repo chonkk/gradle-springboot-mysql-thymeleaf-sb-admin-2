@@ -1,8 +1,8 @@
 
 define(['account/right','datatables'],
 function (right) {
-	
 	var left={};
+		window.left = left;
 	
 	left.init = function init() {
 		createTemplate(createEvent);
@@ -43,20 +43,23 @@ function (right) {
 	        paging: true,
 	        bAutoWidth: false,
  			searching: false,
- 			bServerSide : false,
+ 			"serverSide": true,
  			bSort : false,
  			select:{
  				style:     'single',
  		        className: 'selected'
  			},
- 			stateSave: false,
- 			"pageLength":15,
+ 			stateSave: true,
+ 			"pageLength":4,
  			"lengthChange": false,
 	        "ajax": {
 	        	type: "GET",
 	            url: contextPath + "/account/list",
+				//url: contextPath + "/data/sample_account_list.json",
 	            dataType: 'json',
-	            dataSrc: "content",
+	            dataSrc: "data",
+				accept: 'application/json',
+				timeout: 30000,
 	            cache:false
 	        },
 	        "columns": [
