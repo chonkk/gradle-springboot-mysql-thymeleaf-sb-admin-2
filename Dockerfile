@@ -6,7 +6,7 @@ VOLUME /tmp
 
 EXPOSE 8080
 
-ARG JAR_FILE=build/libs/Application-0.0.1.jar
+ARG JAR_FILE=build/libs/gradle-springboot-mysql-thymeleaf-sb-admin-2-0.0.1.war
 
 ADD ${JAR_FILE} board.jar
 

@@ -22,7 +22,7 @@ services:
       MYSQL_PASSWORD: root
     ports:
       - 8080:8080
-    restart: always
+    restart: no
     links:
       - mysql
     depends_on:

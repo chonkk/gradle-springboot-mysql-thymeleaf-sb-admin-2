@@ -36,11 +36,11 @@ public class Account implements Serializable {
 
     @CreatedDate
     @JsonFormat(pattern = "yyyy-MM-dd'T'HH:mm:ss")
-    @Column(columnDefinition = "NULL DEFAULT CURRENT_TIMESTAMP",updatable = false)
+    @Column(columnDefinition = "DATETIME NULL DEFAULT CURRENT_TIMESTAMP",updatable = false)
     private LocalDateTime createAt;
 
     @LastModifiedDate
     @JsonFormat(pattern = "yyyy-MM-dd'T'HH:mm:ss")
-    @Column(columnDefinition = "NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP",updatable = false,insertable = false)
+    @Column(columnDefinition = "DATETIME NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP",updatable = false,insertable = false)
     private LocalDateTime updated;
 }
